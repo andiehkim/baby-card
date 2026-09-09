@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby Card</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #faf6f2;
+      color: #3d3735;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 720px;
+      text-align: center;
+    }
+
+    .card {
+      background: #fffdfb;
+      border: 1px solid #eee3dc;
+      border-radius: 24px;
+      padding: 70px 40px;
+      box-shadow: 0 12px 40px rgba(100, 75, 60, 0.08);
+    }
+
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #b58f83;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 8vw, 68px);
+      font-weight: normal;
+      line-height: 1.05;
+      color: #594b47;
+      margin-bottom: 24px;
+    }
+
+    .description {
+      max-width: 500px;
+      margin: 0 auto 36px;
+      font-size: 19px;
+      line-height: 1.7;
+      color: #756965;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      border-radius: 50px;
+      background: #c89588;
+      color: white;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      transition: all 0.2s ease;
+    }
+
+    .button:hover {
+      background: #b98275;
+      transform: translateY(-2px);
+    }
+
+    .secondary {
+      display: block;
+      margin-top: 24px;
+      color: #927c74;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .secondary:hover {
+      text-decoration: underline;
+    }
+
+    .decorations {
+      margin-bottom: 24px;
+      font-size: 28px;
+      letter-spacing: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 50px 24px;
+      }
+
+      .description {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+    <section class="card">
+
+      <div class="decorations">✦ 🍼 ✦</div>
+
+      <div class="eyebrow">A little something special</div>
+
+      <h1>Baby Card</h1>
+
+      <p class="description">
+        Bring everyone together to celebrate a new little love.
+        Create a beautiful card, share it with friends and family,
+        and collect their messages all in one place.
+      </p>
+
+      <a href="#" class="button">
+        Create a Card
+      </a>
+
+      <a href="#" class="secondary">
+        Already have a card? Sign one →
+      </a>
+
+    </section>
+  </main>
+
+</body>
+</html>
