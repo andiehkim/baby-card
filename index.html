@@ -2,19 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Let's celebrate</title>
+  <title>A Little Love for Baby</title>
 
   <meta
     name="description"
-    content="A collection of wishes and messages for Danah & her fam."
+    content="A collection of wishes and messages for the parents-to-be."
   />
 
-  <!-- Elegant editorial + handwritten typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -24,10 +20,6 @@
   />
 
   <style>
-    /* =====================================================
-       COLOR PALETTE
-       ===================================================== */
-
     :root {
       --ivory: #f8f6f0;
       --paper: #fffdfa;
@@ -42,14 +34,8 @@
       --muted: #788078;
       --white: #ffffff;
 
-      --shadow:
-        0 20px 60px rgba(45, 61, 51, .08);
+      --shadow: 0 20px 60px rgba(45, 61, 51, .08);
     }
-
-
-    /* =====================================================
-       BASE
-       ===================================================== */
 
     * {
       box-sizing: border-box;
@@ -62,7 +48,6 @@
     body {
       margin: 0;
       min-height: 100vh;
-
       color: var(--ink);
 
       background:
@@ -91,76 +76,199 @@
       cursor: pointer;
     }
 
-
-    /* =====================================================
-       PAGE
-       ===================================================== */
-
     .page {
       width: min(100%, 1120px);
       margin: 0 auto;
       padding: 30px 20px 70px;
     }
 
-
-    /* =====================================================
-       MAIN CARD
-       ===================================================== */
-
     .card {
       position: relative;
       overflow: hidden;
-
-      background:
-        linear-gradient(
-          rgba(255, 253, 250, .96),
-          rgba(255, 253, 250, .96)
-        );
-
+      background: rgba(255, 253, 250, .97);
       border: 1px solid rgba(80, 102, 90, .15);
-
       box-shadow: var(--shadow);
     }
 
-
     /* =====================================================
-       BOTANICAL DECORATIONS
+       ABSTRACT BOTANICAL HERO
        ===================================================== */
 
-    .botanical {
+    .hero-art {
       position: absolute;
+      inset: 0;
+      overflow: hidden;
       pointer-events: none;
-      opacity: .55;
+      z-index: 0;
     }
 
-    .botanical-left {
+    .organic {
+      position: absolute;
+
+      width: 230px;
+      height: 300px;
+
+      border-radius:
+        48% 52% 62% 38%
+        / 42% 38% 62% 58%;
+
+      filter: blur(2px);
+      opacity: .28;
+
+      transform-origin: center;
+
+      animation:
+        organicFloat 13s ease-in-out infinite;
+    }
+
+    .organic-one {
+      top: -95px;
+      left: -75px;
+
+      background:
+        radial-gradient(
+          ellipse,
+          rgba(157, 181, 162, .75),
+          rgba(157, 181, 162, 0) 70%
+        );
+    }
+
+    .organic-two {
+      top: 15px;
+      right: -105px;
+
+      width: 270px;
+      height: 330px;
+
+      background:
+        radial-gradient(
+          ellipse,
+          rgba(214, 180, 174, .65),
+          rgba(214, 180, 174, 0) 70%
+        );
+
+      animation-delay: -5s;
+    }
+
+    .organic-three {
+      bottom: -170px;
+      left: 38%;
+
+      width: 300px;
+      height: 240px;
+
+      opacity: .17;
+
+      background:
+        radial-gradient(
+          ellipse,
+          rgba(157, 181, 162, .8),
+          rgba(157, 181, 162, 0) 70%
+        );
+
+      animation-delay: -9s;
+    }
+
+    .stem {
+      position: absolute;
       top: 20px;
-      left: -5px;
-      width: 190px;
+
+      width: 180px;
+      height: 360px;
+
+      overflow: visible;
+      opacity: .36;
+
+      animation:
+        stemSway 9s ease-in-out infinite;
     }
 
-    .botanical-right {
-      top: 30px;
-      right: -10px;
-      width: 190px;
-      transform: scaleX(-1);
-    }
-
-    .leaf {
+    .stem path {
       fill: none;
-      stroke: var(--green);
-      stroke-width: 1.2;
+
+      stroke:
+        rgba(70, 96, 82, .72);
+
+      stroke-width: .85;
       stroke-linecap: round;
       stroke-linejoin: round;
     }
 
-    .leaf-soft {
-      fill: none;
-      stroke: var(--sage);
-      stroke-width: 1;
-      stroke-linecap: round;
+    .stem-left {
+      left: -20px;
+
+      transform-origin:
+        80px 350px;
     }
 
+    .stem-right {
+      right: -20px;
+
+      animation-delay: -4.5s;
+
+      transform-origin:
+        100px 350px;
+    }
+
+    .petal {
+      position: absolute;
+
+      color: var(--green);
+      font-family: serif;
+
+      opacity: 0;
+
+      animation:
+        petalFloat 8s ease-in-out infinite;
+    }
+
+    .petal-one {
+      top: 24%;
+      left: 24%;
+      font-size: 18px;
+      animation-delay: -2s;
+    }
+
+    .petal-two {
+      top: 36%;
+      right: 25%;
+      font-size: 11px;
+      animation-delay: -5s;
+    }
+
+    .petal-three {
+      top: 16%;
+      left: 39%;
+
+      color: var(--blush);
+      font-size: 10px;
+
+      animation-delay: -7s;
+    }
+
+    .petal-four {
+      top: 47%;
+      left: 14%;
+      font-size: 9px;
+      animation-delay: -1s;
+    }
+
+    .petal-five {
+      top: 28%;
+      right: 14%;
+
+      color: var(--blush);
+      font-size: 12px;
+
+      animation-delay: -4s;
+    }
+
+    .petal-six {
+      top: 54%;
+      right: 34%;
+      font-size: 8px;
+      animation-delay: -6s;
+    }
 
     /* =====================================================
        HERO
@@ -188,6 +296,9 @@
 
       letter-spacing: .25em;
       text-transform: uppercase;
+
+      animation:
+        heroTitleIn 1s cubic-bezier(.2, .7, .2, 1) both;
     }
 
     .hero h1 {
@@ -205,6 +316,9 @@
 
       font-weight: 400;
       line-height: 1.05;
+
+      animation:
+        heroTitleIn 1s cubic-bezier(.2, .7, .2, 1) both;
     }
 
     .hero h1 span {
@@ -216,6 +330,10 @@
 
       font-family: "Caveat", cursive;
       font-size: .62em;
+      font-weight: 500;
+
+      animation:
+        heroTitleIn 1s .12s cubic-bezier(.2, .7, .2, 1) both;
     }
 
     .hero-description {
@@ -227,6 +345,9 @@
 
       font-size: .94rem;
       line-height: 1.8;
+
+      animation:
+        heroDescriptionIn 1s .25s ease both;
     }
 
     .ornament {
@@ -235,16 +356,17 @@
       justify-content: center;
 
       gap: 13px;
-
       margin-top: 34px;
 
       color: var(--sage);
+
+      animation:
+        heroDescriptionIn 1s .4s ease both;
     }
 
     .ornament-line {
       width: 55px;
       height: 1px;
-
       background: var(--line);
     }
 
@@ -252,7 +374,6 @@
       font-size: .9rem;
       color: var(--green);
     }
-
 
     /* =====================================================
        SIGN CTA
@@ -270,7 +391,6 @@
 
     .sign-button {
       border: 1px solid var(--green);
-
       border-radius: 2px;
 
       padding: 14px 28px;
@@ -293,10 +413,8 @@
     .sign-button:hover {
       color: var(--green);
       background: transparent;
-
       transform: translateY(-2px);
     }
-
 
     /* =====================================================
        FORM
@@ -371,7 +489,6 @@
       width: 100%;
 
       border: 1px solid var(--line);
-
       border-radius: 0;
 
       outline: none;
@@ -404,7 +521,6 @@
       align-items: center;
 
       gap: 14px;
-
       margin-top: 10px;
     }
 
@@ -455,7 +571,6 @@
       color: #9c5953;
     }
 
-
     /* =====================================================
        MESSAGES
        ===================================================== */
@@ -473,7 +588,6 @@
 
     .section-heading {
       margin-bottom: 38px;
-
       text-align: center;
     }
 
@@ -603,10 +717,8 @@
       color: #9ba39d;
 
       font-size: .65rem;
-
       letter-spacing: .03em;
     }
-
 
     /* =====================================================
        EMPTY / LOADING
@@ -647,9 +759,9 @@
 
       border-radius: 50%;
 
-      animation: spin .8s linear infinite;
+      animation:
+        spin .8s linear infinite;
     }
-
 
     /* =====================================================
        FOOTER
@@ -669,7 +781,6 @@
 
       font-size: 1.15rem;
     }
-
 
     /* =====================================================
        ANIMATIONS
@@ -693,6 +804,81 @@
       }
     }
 
+    @keyframes heroTitleIn {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes heroDescriptionIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes organicFloat {
+      0%,
+      100% {
+        transform:
+          translate3d(0, 0, 0)
+          rotate(-3deg)
+          scale(1);
+      }
+
+      50% {
+        transform:
+          translate3d(8px, 12px, 0)
+          rotate(4deg)
+          scale(1.04);
+      }
+    }
+
+    @keyframes stemSway {
+      0%,
+      100% {
+        transform: rotate(-1deg);
+      }
+
+      50% {
+        transform: rotate(2deg);
+      }
+    }
+
+    @keyframes petalFloat {
+      0% {
+        opacity: 0;
+        transform:
+          translate3d(0, 18px, 0)
+          rotate(0deg);
+      }
+
+      25% {
+        opacity: .45;
+      }
+
+      70% {
+        opacity: .3;
+      }
+
+      100% {
+        opacity: 0;
+        transform:
+          translate3d(8px, -34px, 0)
+          rotate(25deg);
+      }
+    }
 
     /* =====================================================
        MOBILE
@@ -711,17 +897,17 @@
           55px;
       }
 
-      .botanical-left,
-      .botanical-right {
-        width: 130px;
+      .stem {
+        opacity: .25;
+        transform: scale(.8);
       }
 
-      .botanical-left {
-        left: -25px;
+      .stem-left {
+        left: -55px;
       }
 
-      .botanical-right {
-        right: -25px;
+      .stem-right {
+        right: -55px;
       }
 
       .hero-description {
@@ -734,7 +920,6 @@
 
       .form-wrapper {
         padding: 0 15px;
-
         margin-bottom: 55px;
       }
 
@@ -751,7 +936,6 @@
 
       .messages {
         grid-template-columns: 1fr;
-
         gap: 16px;
       }
 
@@ -763,9 +947,21 @@
         padding-bottom: 30px;
       }
     }
+
+    /* Respect reduced-motion accessibility settings. */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+      }
+    }
   </style>
 </head>
-
 
 <body>
 
@@ -774,90 +970,47 @@
     <section class="card">
 
       <!-- =================================================
-           BOTANICAL LINE ART
+           ABSTRACT BOTANICAL DECOR
            ================================================= -->
 
-      <svg
-        class="botanical botanical-left"
-        viewBox="0 0 200 300"
-        aria-hidden="true"
-      >
-        <path
-          class="leaf"
-          d="M30 280 C60 220 80 155 105 35"
-        />
+      <div class="hero-art" aria-hidden="true">
 
-        <path
-          class="leaf"
-          d="M52 225 C28 210 18 184 22 158 C46 165 61 184 52 225"
-        />
+        <div class="organic organic-one"></div>
+        <div class="organic organic-two"></div>
+        <div class="organic organic-three"></div>
 
-        <path
-          class="leaf"
-          d="M69 178 C96 166 108 142 105 116 C80 125 68 144 69 178"
-        />
+        <svg
+          class="stem stem-left"
+          viewBox="0 0 180 360"
+          preserveAspectRatio="none"
+        >
+          <path d="M12 355 C38 280 24 220 73 155 C99 121 115 82 105 8" />
+          <path d="M46 260 C22 246 13 223 16 199" />
+          <path d="M48 218 C74 203 82 181 81 158" />
+          <path d="M67 161 C43 149 38 127 43 105" />
+          <path d="M86 112 C108 99 113 79 109 61" />
+        </svg>
 
-        <path
-          class="leaf"
-          d="M83 125 C57 110 49 87 54 64 C78 74 90 94 83 125"
-        />
+        <svg
+          class="stem stem-right"
+          viewBox="0 0 180 360"
+          preserveAspectRatio="none"
+        >
+          <path d="M168 355 C142 280 156 220 107 155 C81 121 65 82 75 8" />
+          <path d="M134 260 C158 246 167 223 164 199" />
+          <path d="M132 218 C106 203 98 181 99 158" />
+          <path d="M113 161 C137 149 142 127 137 105" />
+          <path d="M94 112 C72 99 67 79 71 61" />
+        </svg>
 
-        <path
-          class="leaf-soft"
-          d="M42 239 C28 224 20 207 19 188"
-        />
+        <span class="petal petal-one">·</span>
+        <span class="petal petal-two">·</span>
+        <span class="petal petal-three">✦</span>
+        <span class="petal petal-four">·</span>
+        <span class="petal petal-five">✧</span>
+        <span class="petal petal-six">·</span>
 
-        <path
-          class="leaf-soft"
-          d="M77 157 C89 146 98 132 102 116"
-        />
-
-        <circle
-          cx="54"
-          cy="63"
-          r="3"
-          fill="none"
-          stroke="var(--blush)"
-          stroke-width="1"
-        />
-      </svg>
-
-
-      <svg
-        class="botanical botanical-right"
-        viewBox="0 0 200 300"
-        aria-hidden="true"
-      >
-        <path
-          class="leaf"
-          d="M30 280 C60 220 80 155 105 35"
-        />
-
-        <path
-          class="leaf"
-          d="M52 225 C28 210 18 184 22 158 C46 165 61 184 52 225"
-        />
-
-        <path
-          class="leaf"
-          d="M69 178 C96 166 108 142 105 116 C80 125 68 144 69 178"
-        />
-
-        <path
-          class="leaf"
-          d="M83 125 C57 110 49 87 54 64 C78 74 90 94 83 125"
-        />
-
-        <path
-          class="leaf-soft"
-          d="M42 239 C28 224 20 207 19 188"
-        />
-
-        <path
-          class="leaf-soft"
-          d="M77 157 C89 146 98 132 102 116"
-        />
-      </svg>
+      </div>
 
 
       <!-- =================================================
@@ -1076,15 +1229,12 @@
     /* =====================================================
        CARD CONFIGURATION
 
-       Change these later without touching the design.
+       These are the easy-to-change settings.
        ===================================================== */
 
     const CARD_CONFIG = {
-
       parents: "Baby on the Way",
-
       pageTitle: "A Little Love for Baby"
-
     };
 
 
@@ -1111,49 +1261,31 @@
        ===================================================== */
 
     const showFormButton =
-      document.getElementById(
-        "showFormButton"
-      );
+      document.getElementById("showFormButton");
 
     const cancelButton =
-      document.getElementById(
-        "cancelButton"
-      );
+      document.getElementById("cancelButton");
 
     const formWrapper =
-      document.getElementById(
-        "formWrapper"
-      );
+      document.getElementById("formWrapper");
 
     const signatureForm =
-      document.getElementById(
-        "signatureForm"
-      );
+      document.getElementById("signatureForm");
 
     const nameInput =
-      document.getElementById(
-        "name"
-      );
+      document.getElementById("name");
 
     const messageInput =
-      document.getElementById(
-        "message"
-      );
+      document.getElementById("message");
 
     const submitButton =
-      document.getElementById(
-        "submitButton"
-      );
+      document.getElementById("submitButton");
 
     const formStatus =
-      document.getElementById(
-        "formStatus"
-      );
+      document.getElementById("formStatus");
 
     const messagesContainer =
-      document.getElementById(
-        "messages"
-      );
+      document.getElementById("messages");
 
 
     /* =====================================================
@@ -1246,9 +1378,7 @@
     function escapeHtml(value) {
 
       const div =
-        document.createElement(
-          "div"
-        );
+        document.createElement("div");
 
       div.textContent =
         value ?? "";
@@ -1262,9 +1392,7 @@
        FORMAT DATE
        ===================================================== */
 
-    function formatDate(
-      dateString
-    ) {
+    function formatDate(dateString) {
 
       if (!dateString) {
         return "";
@@ -1301,9 +1429,7 @@
     ) {
 
       const article =
-        document.createElement(
-          "article"
-        );
+        document.createElement("article");
 
       article.className =
         "message";
@@ -1312,14 +1438,10 @@
         String(signature.id);
 
       const name =
-        escapeHtml(
-          signature.name
-        );
+        escapeHtml(signature.name);
 
       const message =
-        escapeHtml(
-          signature.message
-        );
+        escapeHtml(signature.message);
 
       article.innerHTML = `
 
@@ -1343,9 +1465,7 @@
         }
 
         <small class="message-date">
-          ${formatDate(
-            signature.created_at
-          )}
+          ${formatDate(signature.created_at)}
         </small>
 
       `;
@@ -1598,7 +1718,7 @@
 
 
     /* =====================================================
-       REALTIME
+       REALTIME SUBSCRIPTION
        ===================================================== */
 
     function subscribeToNewMessages() {
